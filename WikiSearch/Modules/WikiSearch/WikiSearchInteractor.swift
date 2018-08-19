@@ -12,7 +12,6 @@ import Cache
 class WikiSearchInteractor {
     
     func searchWiki(for query:String, onCompletion:@escaping (_ status: RequestStatus, _ result: [SearchData]?, _ error: ErrorData?) -> Void) {
-        if Reachability.isConnectedToNetwork() {
             let session = URLSession.shared.dataTask(with: createSearchUrl(for: query)) { (data, response, error) in
                 DispatchQueue.main.async {
                     if let responseData = data {
@@ -37,13 +36,13 @@ class WikiSearchInteractor {
                             return
                         }
                     }
+                    else {
+                        onCompletion(.fail, nil, ErrorData(message: error?.localizedDescription))
+                        return
+                    }
                 }
             }
             session.resume()
-        } else {
-            onCompletion(.noInternet, nil, ErrorData(message:"NO_INTERNET_MSG".localized))
-        }
-        
     }
     
     func getSearchHistoryFromCache(onCompletion: @escaping (_ status: RequestStatus, _ result: [SearchData]?, _ error: ErrorData?) -> Void) {

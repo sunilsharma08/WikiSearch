@@ -115,9 +115,11 @@ extension WikiSearchPresenter: WSPresenterInterface {
     }
     
     func searchWiki(for query: String) {
+        if isOffline {
+            return
+        }
         // Cancel the currently pending item
         pendingSearchRequest?.cancel()
-        
         let searchRequestWorkItem = DispatchWorkItem { [weak self] in
             self?.getSearchResultFromServer(for: query)
         }
