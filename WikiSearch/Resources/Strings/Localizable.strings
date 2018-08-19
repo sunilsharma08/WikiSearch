@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  WikiSearch
+
+  Created by Sunil on 18/08/18.
+  Copyright © 2018 Sunil Sharma. All rights reserved.
+*/
+
+"SEARCH_VIEW_TITLE" = "Wikipedia";
+"HISTORY_TITLE" = "Last Searched Result";
+"OFFLINE" = "No Internet Connection";
+"OFFLINE_MSG" = "Please connect with working Internet connection to browse wikipedia.";
+
+
+//*********     Error Message ************//
+"NO_INTERNET_MSG" = "No internet connection";
+"JSON_PARSE_ERROR_MSG" = "Failed to parse JSON data";
+"ERROR" = "Error";
+"FAILED_TO_CREATE_URL" = "Failed to create url for Wiki Page";
+"CORRUPT_DATA" = "Corrupt data found!";
+"WRONG_URL" = "Failed to create url!";
+"UNKNOWN_ERROR" = "Oops! Something went wrong.";
+

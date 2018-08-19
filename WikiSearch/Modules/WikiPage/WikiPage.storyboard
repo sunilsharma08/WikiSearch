@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wiki Page View Controller-->
+        <scene sceneID="nIn-oo-bYX">
+            <objects>
+                <viewController storyboardIdentifier="WikiPageViewController" id="Qm9-CL-lDU" customClass="WikiPageViewController" customModule="WikiSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SnV-zF-JHK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="je9-5s-jKB">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="cuf-41-MKU"/>
+                                    <constraint firstAttribute="height" constant="20" id="ie6-2m-7Bv"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="je9-5s-jKB" firstAttribute="centerX" secondItem="SnV-zF-JHK" secondAttribute="centerX" id="ENn-2Y-5ed"/>
+                            <constraint firstItem="je9-5s-jKB" firstAttribute="centerY" secondItem="SnV-zF-JHK" secondAttribute="centerY" id="yie-IW-YoG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XTy-Nt-bDi"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="je9-5s-jKB" id="MT2-5q-9vF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd3-1U-tCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="78.710644677661179"/>
+        </scene>
+    </scenes>
+</document>

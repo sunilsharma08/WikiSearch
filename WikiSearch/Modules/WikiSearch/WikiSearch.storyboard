@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wiki Search View Controller-->
+        <scene sceneID="HQT-ta-XHh">
+            <objects>
+                <viewController storyboardIdentifier="WikiSearchViewController" id="Tq8-eS-cpX" customClass="WikiSearchViewController" customModule="WikiSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EN-eq-Zjl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-WV-6yX">
+                                <rect key="frame" x="0.0" y="77" width="375" height="590"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Wikipedia" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-5z-sHE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="FXF-8u-0In"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C78-UK-PpC">
+                                <rect key="frame" x="0.0" y="75" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.74837239583333337" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="qJi-qs-OZq"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vzH-Pm-duf">
+                                <rect key="frame" x="169.5" y="315.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Emb-CX-QYI"/>
+                                    <constraint firstAttribute="height" constant="37" id="hDF-vc-pF5"/>
+                                </constraints>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SrE-At-FhA">
+                                <rect key="frame" x="0.0" y="227" width="375" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="2gy-Sp-iFO"/>
+                                </constraints>
+                                <string key="text">Start Exploring
+Wikipedia</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="35"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="C78-UK-PpC" firstAttribute="trailing" secondItem="bZ0-5z-sHE" secondAttribute="trailing" id="6bR-hj-Fjc"/>
+                            <constraint firstItem="SrE-At-FhA" firstAttribute="trailing" secondItem="REG-ez-gcD" secondAttribute="trailing" id="HGc-PL-ox9"/>
+                            <constraint firstItem="Ih9-WV-6yX" firstAttribute="bottom" secondItem="REG-ez-gcD" secondAttribute="bottom" id="LMw-MR-2Ol"/>
+                            <constraint firstItem="Ih9-WV-6yX" firstAttribute="top" secondItem="bZ0-5z-sHE" secondAttribute="bottom" constant="1" id="LWO-hw-a4w"/>
+                            <constraint firstItem="Ih9-WV-6yX" firstAttribute="trailing" secondItem="REG-ez-gcD" secondAttribute="trailing" id="NM1-Es-2p3"/>
+                            <constraint firstItem="bZ0-5z-sHE" firstAttribute="top" secondItem="REG-ez-gcD" secondAttribute="top" id="NeZ-Nq-jRp"/>
+                            <constraint firstItem="vzH-Pm-duf" firstAttribute="centerY" secondItem="5EN-eq-Zjl" secondAttribute="centerY" id="Oct-WQ-LVZ"/>
+                            <constraint firstItem="vzH-Pm-duf" firstAttribute="centerX" secondItem="5EN-eq-Zjl" secondAttribute="centerX" id="QRe-q8-4Gh"/>
+                            <constraint firstItem="SrE-At-FhA" firstAttribute="centerY" secondItem="5EN-eq-Zjl" secondAttribute="centerY" id="Xqb-wS-rIo"/>
+                            <constraint firstItem="C78-UK-PpC" firstAttribute="bottom" secondItem="bZ0-5z-sHE" secondAttribute="bottom" id="afc-6L-bXq"/>
+                            <constraint firstItem="bZ0-5z-sHE" firstAttribute="leading" secondItem="REG-ez-gcD" secondAttribute="leading" id="gdV-S3-edg"/>
+                            <constraint firstItem="SrE-At-FhA" firstAttribute="leading" secondItem="REG-ez-gcD" secondAttribute="leading" id="grG-lM-67H"/>
+                            <constraint firstItem="C78-UK-PpC" firstAttribute="leading" secondItem="bZ0-5z-sHE" secondAttribute="leading" id="gry-eu-1yS"/>
+                            <constraint firstItem="SrE-At-FhA" firstAttribute="centerX" secondItem="5EN-eq-Zjl" secondAttribute="centerX" id="rkr-JN-bKg"/>
+                            <constraint firstItem="bZ0-5z-sHE" firstAttribute="trailing" secondItem="REG-ez-gcD" secondAttribute="trailing" id="t6a-qA-lUK"/>
+                            <constraint firstItem="Ih9-WV-6yX" firstAttribute="leading" secondItem="REG-ez-gcD" secondAttribute="leading" id="uCJ-g9-le2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="REG-ez-gcD"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="vzH-Pm-duf" id="bic-4Z-nK1"/>
+                        <outlet property="emptyDataMsgLabel" destination="SrE-At-FhA" id="tNI-9I-UcF"/>
+                        <outlet property="searchBottomView" destination="C78-UK-PpC" id="9co-qT-pcD"/>
+                        <outlet property="searchResultTableView" destination="Ih9-WV-6yX" id="qxa-lZ-rTP"/>
+                        <outlet property="wikiSearchBar" destination="bZ0-5z-sHE" id="w0S-Pw-B5k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwy-t9-EG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.60000000000002" y="127.28635682158921"/>
+        </scene>
+    </scenes>
+</document>
